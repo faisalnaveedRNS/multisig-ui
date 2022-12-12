@@ -38,7 +38,7 @@ export const environment = object()
   .shape({
     funadbSecret:string().stripEmptyString(),
     publicHost: string().stripEmptyString().default('http://localhost:3000/'),
-    chainid: string().stripEmptyString().default('pylons-testnet-3'),
+    chainid: string().stripEmptyString().default('pylons-mainnet-1'),
     chainname: string().stripEmptyString().default('pylons'),
     rpc: string().stripEmptyString().default('https://rpc.pylons.tech'),
     rest: string().stripEmptyString().default('https://lcd.pylons.tech/'),
