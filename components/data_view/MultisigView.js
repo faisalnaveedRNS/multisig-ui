@@ -243,7 +243,7 @@ const MultisigView = () => {
                                                 }}
                                             >
                                                 {
-                                                    0
+                                                  8
                                                 }
                                             </td>
                                         </tr>

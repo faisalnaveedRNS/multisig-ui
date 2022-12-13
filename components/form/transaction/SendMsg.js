@@ -52,7 +52,7 @@ const SendMsgForm = ({ address, chain, style, msgs, setMsgs }) => {
     } else if (e.target.name === 'denom') {
       setTxBody({
         ...txBody,
-        [e.target.name]: denom[e.target.value]
+        [e.target.name]: chain?.supportedDenom[e.target.value]
       });
     } else {
       setTxBody({

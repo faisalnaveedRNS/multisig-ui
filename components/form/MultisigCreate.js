@@ -64,6 +64,7 @@ const MultisigCreate = () => {
         const address = e.target.value;
         if (address.length > 0) {
             try {
+                console.log(chain); 
                 checkAddress(address, chain.prefix)
                 if (checkDuplicate(address, index)) {
                     throw new Error("Duplicate address")

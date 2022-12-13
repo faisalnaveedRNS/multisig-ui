@@ -78,7 +78,7 @@ const TransactionView = () => {
             if (sig._id === signature._id) {
                 return signature
             }
-            return sig
+            return sigAmount
         })
         setCurrentSignatures([...editSignatures])
     }
