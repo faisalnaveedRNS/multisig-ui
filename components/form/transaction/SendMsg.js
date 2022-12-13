@@ -45,14 +45,19 @@ const SendMsgForm = ({ address, chain, style, msgs, setMsgs }) => {
 
   const handleKeyGroupChange = e => {
     if (e.target.name === 'amount') {
+
+      let amount  = parseFloat(e.target.value)*chain?.currencies[e.target.value].coinDecimals
       setTxBody({
         ...txBody,
-        [e.target.name]: parseFloat(e.target.value)
+        [e.target.name]: amount
       });
     } else if (e.target.name === 'denom') {
+
+
+      console.log('target value support',chain?.currencies[e.target.value]);
       setTxBody({
         ...txBody,
-        [e.target.name]: chain?.supportedDenom[e.target.value]
+        [e.target.name]: chain?.currencies[e.target.value].coinMinimalDenom
       });
     } else {
       setTxBody({
@@ -108,7 +113,7 @@ const SendMsgForm = ({ address, chain, style, msgs, setMsgs }) => {
           padding: '1em'
         }}
       >
-        {chain?.supportedDenom?.split(',').map((data, index) => {
+        {chain?.currencies?.map((data, index) => {
           return (
             <option
               key={index}
@@ -118,7 +123,7 @@ const SendMsgForm = ({ address, chain, style, msgs, setMsgs }) => {
                 color: 'black'
               }}
             >
-              {data}
+              {data.coinDenom}
             </option>
           );
         })}

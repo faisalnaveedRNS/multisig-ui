@@ -299,8 +299,27 @@ export const chainData = [
         govExplorer: environment.govExplorer,
         logo: environment.logo,
         hyperLink: environment.hyperLink,
-        supportedDenom: environment.supportedDenom, 
-        supportedDenomDisplay: environment.supportedDenomDisplay, 
+        currencies: [
+            {
+                coinDenom: 'BEDROCK',
+                coinMinimalDenom: 'ubedrock',
+                coinDecimals: 6,
+                coinGeckoId: 'bedock',
+            },
+            {
+                coinDenom: 'PYLON',
+                coinMinimalDenom: 'upylon',
+                coinDecimals: 6,
+                coinGeckoId: 'pylon',
+            },
+            {
+                coinDenom: 'USD',
+                coinMinimalDenom: 'ustripeusd',
+                coinDecimals: 6,
+                coinGeckoId: 'usd',
+            }
+      
+        ]
     },
 ]
 

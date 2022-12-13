@@ -17,11 +17,24 @@ export  const chainObj = [{
     },
     currencies: [
         {
-            coinDenom: environment.currenciescoindenom,
-            coinMinimalDenom: environment.currenciescoinminimaldenom,
-            coinDecimals: environment.currenciescoindecimals,
-            coinGeckoId: environment.currenciescoingeckoid,
+            coinDenom: 'BEDROCK',
+            coinMinimalDenom: 'ubedrock',
+            coinDecimals: 6,
+            coinGeckoId: 'bedock',
         },
+        {
+            coinDenom: 'PYLON',
+            coinMinimalDenom: 'upylon',
+            coinDecimals: 6,
+            coinGeckoId: 'pylon',
+        },
+        {
+            coinDenom: 'USD',
+            coinMinimalDenom: 'ustripeusd',
+            coinDecimals: 6,
+            coinGeckoId: 'usd',
+        }
+  
     ],
     feeCurrencies: [
         {

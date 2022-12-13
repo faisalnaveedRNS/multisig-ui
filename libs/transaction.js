@@ -80,7 +80,7 @@ export const createSendMsg = (
         typeUrl: "/cosmos.bank.v1beta1.MsgSend",
         value: msgSend,
     };
-
+    console.log('send message',msg);
     return msg
 }
 
